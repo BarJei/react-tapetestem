@@ -1,0 +1,9 @@
+.login-input {
+  padding: 8px 0px;
+  width: 260px;
+}
+
+.login-button {
+  float: right;
+  color: red;
+}
