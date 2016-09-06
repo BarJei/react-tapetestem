@@ -1,34 +1,17 @@
 // import React from 'react';
-// import Hello from 'components/Hello'
+// import ReactDOM from 'react-dom';
+// import Hello from 'components/Hello';
 
-// React.render(
+// ReactDOM.render(
 //   <Hello />,
 //   document.getElementById('app')
 // );
 
-/* eslint-disable import/default */
-
 import React from 'react';
-import {render} from 'react-dom';
-import { Provider } from 'react-redux';
-import { Router, browserHistory } from 'react-router';
-import routes from './routes';
-import configureStore from './store/configureStore.dev';
+import ReactDOM from "react-dom";
 
-// Tell webpack to load favicon.ico
-require('./favicon.ico'); 
+// index.js that contains all elements/components
+import App from 'components/Container';
 
-// Yep, that's right. You can import SASS/CSS files too! Webpack will run the associated loader and plug this into the page.
-import './styles/styles.scss'; 
-import { syncHistoryWithStore } from 'react-router-redux';
-
-const store = configureStore();
-
-// Create an enhanced history that syncs navigation events with the store
-const history = syncHistoryWithStore(browserHistory, store);
-
-render(
-  <Provider store={store}>
-    <Router history={history} routes={routes} />
-  </Provider>, document.getElementById('app')
-);
+const app = document.getElementById('app');
+ReactDOM.render(<App />, app);
