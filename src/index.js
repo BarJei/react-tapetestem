@@ -9,8 +9,6 @@
 
 import React from 'react';
 import ReactDOM from "react-dom";
-
-// index.js that contains all elements/components
 import App from 'components/Container';
 
 const app = document.getElementById('app');

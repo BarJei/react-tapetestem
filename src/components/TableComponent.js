@@ -25,11 +25,20 @@ export default class TableComponent extends Component {
     })
   }
 
+  // state = {};
+
+  // handleSelectRow = (item, index) => {
+  //   this.setState({
+  //     selectedItem: JSON.stringify(item, null, 2),
+  //     selectedIndex: index,
+  //   })
+  // };
+
   render() {
     const { selectedItem, selectedIndex } = this.state
     return (
       <div>
-        <Table className='selectable' data={data} onSelectRow={this.handleSelectRow}>
+        <Table className='selectable' data={data} onSelectRow={this.handleSelectRow.bind(this)}>
           <Table.Column dataKey='country' />
           <Table.Column dataKey='revenue' />
           <Table.Column dataKey='orders' />
