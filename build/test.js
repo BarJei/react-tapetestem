@@ -62,7 +62,8 @@
 
 	var map = {
 		"./__test__/index.spec.js": 3,
-		"./components/__test__/hello.specs.js": 44
+		"./components/__test__/hello.specs.js": 44,
+		"./components/__test__/tablecomponent.specs.js": 78
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -13628,6 +13629,12 @@
 
 	module.exports = onlyChild;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
+
+/***/ },
+/* 78 */
+/***/ function(module, exports) {
+
+	"use strict";
 
 /***/ }
 /******/ ]);

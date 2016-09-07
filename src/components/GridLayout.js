@@ -6,7 +6,6 @@ const _ = require('lodash-node');
 const WidthProvider = require('react-grid-layout').WidthProvider;
 var ResponsiveReactGridLayout = require('react-grid-layout').Responsive;
 ResponsiveReactGridLayout = WidthProvider(ResponsiveReactGridLayout);
-const axios = require('axios');
 import { Link, Button, Colors, Container, Divider, Header } from 'stardust';
 
 const originalLayouts = getFromLS('layouts') || {};
@@ -56,14 +55,6 @@ var GridLayout = React.createClass({
   render() {
 
     let dataGrid = {w: 2, h: 3, x: 0, y: 0};
-
-    axios.get('http://52.24.133.167:3000/v1/grids/')
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
 
     return (
       <Container>
